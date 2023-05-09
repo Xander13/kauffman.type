@@ -3,37 +3,35 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: none;
+}
+
+.dark-mode {
+	background-color: #000000;
+	color: #fff;
+	transition: 0.5s ease;
+}
+
+.dark-mode input[type=text]{
+	background-color: black;
+	color: white;
+	transition: 0.5s ease;
+}
+
+.dark-mode .chips h4{
+	color: black;
 }
 
 body {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
+	transition: 0.5s ease;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #ffffff; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #bbbbbb; 
-    border-radius: 100rem;
-    border: 7px solid white;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #393939; 
-  }
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-weight: normal;
 	margin-bottom: 0.5em;
 }
@@ -81,24 +79,134 @@ nav a {
 	font-weight: bold;
 }
 
+.hero {
+	height: auto;
+	padding-bottom: 32px;
+}
+
 /* Main */
 main {
-	max-width: 1200px;
+	max-width: 95%;
 	margin: 0 auto;
 	padding: 2em 1em;
 }
 
-.title{
-    display: flex;
-    justify-content: space-between;
+input[type=text] {
+	width: 100%;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 3.5vw;
+	padding: 0;
+	border: none;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin-right: 32px;
 }
 
-.image{
-    width: 100%;
-    background-color: rgb(247, 247, 247);
-    margin-top: 22px;
+input[type=text]:hover {
+	opacity: 0.5;
+	cursor: pointer;
 }
 
-.font-preview{
-    padding-bottom: 56px;
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
+
+.chips {
+	width: 300px;
+	height: auto;
+	display: inline-flex;
+	flex-wrap: wrap;
+	padding-right: 32px;
+}
+
+.fonts{
+	padding-bottom: 56px;
+	padding-top: 56px;
+	border-bottom: 1px solid gray;
+}
+
+.title h5 {
+	font-size: 16px;
+	font-weight: 200;
+	padding-right: 132px;
+	width: 300px;
+}
+
+.chips h4 {
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: gainsboro;
+	border-radius: 100rem;
+	width: fit-content;
+	font-weight: 100;
+}
+
+.darkBtn{
+	background-color: white;
+	border: none;
+	font-size: 23px;
+	cursor: pointer;
+}
+
+.darkBtn:hover{
+	text-decoration: underline;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin-left: 12px;
+  }
+  
+  .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: rgb(0, 0, 0);
+	transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #ffffff;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #000000;
+  }
+  
+  input:checked + .slider:before {
+	transform: translateX(26px);
+  }
+  
+  .slider.round {
+	border-radius: 34px;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
+  }
